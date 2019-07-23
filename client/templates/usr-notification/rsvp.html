@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template name="rsvp">
   <div id="notification">
   <div class="container">
@@ -36,3 +37,43 @@
   </div><!-- container-->
 </div>
 </template>
+=======
+<template name="rsvp">
+  <div id="notification">
+  <div class="container">
+    <div class="well">
+      <div class="page-header">
+        <h4>Notifications</h4>
+      </div>
+
+      {{#if Template.subscriptionsReady}}
+        <div id="flux">
+
+
+        {{#if notifications.count}}
+          {{#each notifications}}
+            {{#if anyAttendees count}}
+              {{#if isSingular count}}
+                <p class="alert {{#if seen}}  {{else}} markAsRead alert-info{{/if}}"><i class="fas fa-bell" aria-hidden="true"> </i> 1 person RSVPed to your <a href="{{pathFor 'hangout'}}/{{hangoutId}}"> Hangout. </a> {{dispDate date}}</p>
+                {{else}}
+                <p class="alert {{#if seen}}  {{else}} markAsRead alert-info{{/if}}"><i class="fas fa-bell" aria-hidden="true"> </i> {{count}} people RSVPed to your <a href="{{pathFor 'hangout'}}/{{hangoutId}}"> Hangout. </a> {{dispDate date}} </p>
+              {{/if}}
+            {{/if}}
+
+
+          {{/each}}
+          {{else}}
+
+          <div class="well text-center">
+              <h4>There are no notifications.</h4>
+          </div>
+          
+        {{/if}}
+
+        </div>
+      {{/if}}
+    </div>
+  </div><!-- container-->
+</div>
+</template>
+>>>>>>> upstream/staging

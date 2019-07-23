@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Background colors
 $bg-lightgrey: #f9f9f9;
 $bg-white: #fff;
@@ -39,3 +40,52 @@ $end-hangout-color: #AD4545;
 .text-success-color {
   color: $hangout-collab;
 }
+=======
+//Background colors
+$bg-lightgrey: #f9f9f9;
+$bg-white: #fff;
+
+//Other colors
+$header-bg: #3D5A96;
+$cta-blue: #1e90ff;
+$cta-red: #e60000;
+$banner: #90ff1e;
+$light-blue: #5eafff;
+$kudo: #9b9b9b;
+$primary-grey: #4a4a4a;
+$secondary-grey: #8e8e8e;
+$hangout-teaching: #f5a623;
+$hangout-collab: #7ed321;
+$hangout-silent: #d9534f;
+$icon-silent: #d9534f;
+$icon-teaching: #f0ad4e;
+$icon-collab: #7ed321;
+$inbox-green: #9acd32;
+$divider: #e1e1e1;
+$inactive: #cfcfcf;
+$warm-grey: #9b9b9b;
+$dodgerblue: #1e90ff;
+$white: #fff;
+$black: #333;
+$success-green: #7ed321;
+$info-blue: #5bc0de;
+$warning-orange: #f0ad4e;
+$danger-red: #d9534f;
+$well: #f5f5f5;
+$end-hangout-color: #AD4545;
+$light-grey: #D3D3D3;
+$github: #333;
+$slack: #3AAF85;
+
+.text-warning-color {
+  color: $hangout-teaching;
+}
+
+.text-danger-color {
+  color: $hangout-silent;
+}
+
+.text-success-color {
+  color: $hangout-collab;
+}
+>>>>>>> upstream/staging

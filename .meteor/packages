@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Meteor packages used by this project, one per line.
 # Check this file (and the other files in this directory) into your repository.
 #
@@ -62,3 +63,76 @@ shell-server
 
 abernix:standard-minifier-js@1.2.2
 markdown
+=======
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-base@1.4.0             # Packages every Meteor app needs to have
+mobile-experience@1.0.5       # Packages for a great mobile UX
+mongo@1.5.0                   # The database Meteor supports right now
+blaze-html-templates    # Compile .html files into Meteor Blaze views
+session@1.1.7                 # Client-side reactive dictionary for your app
+tracker@1.2.0                 # Meteor's client-side reactive programming library
+es5-shim@4.8.0                # ECMAScript 5 compatibility for older browsers.
+ecmascript@0.11.1              # Enable ECMAScript2015+ syntax in app code
+accounts-password@1.5.1
+fourseven:scss@4.9.0
+check@1.3.1
+ejson@1.1.0
+momentjs:moment
+accounts-base@1.4.2
+accounts-oauth@1.1.15
+arillo:flow-router-helpers
+http@1.4.1
+acemtp:accounts-slack
+reactive-var@1.0.11
+simple:reactive-method
+peppelg:bootstrap-3-modal
+tsega:bootstrap3-datetimepicker
+natestrauser:connection-banner
+tap:i18n
+copleykj:livestamp
+mrt:moment-timezone
+joshowens:timezone-picker
+msavin:mongol
+email@1.2.3
+meteorhacks:ssr
+sacha:spin
+georgediab:slack-notify
+percolate:synced-cron@=1.3.0
+gadicohen:sitemaps
+kadira:dochead
+alanning:roles
+random@1.1.0
+kadira:flow-router
+kadira:blaze-layout
+ian:accounts-ui-bootstrap-3
+meteorhacks:picker
+matb33:bootstrap-popovers
+erasaur:meteor-lodash
+themeteorchef:bert
+shell-server@0.3.1
+markdown@1.0.12
+accounts-github@1.4.1
+dynamic-import@0.4.0
+standard-minifier-js@2.3.4
+browser-policy@1.1.0
+montiapm:agent
+mongo-livedata@1.0.12
+meteorhacks:meteorx
+lmieulet:meteor-coverage
+harrison:papa-parse
+stylus@=2.513.14
+practicalmeteor:chai
+meteortesting:browser-tests
+meteortesting:mocha
+practicalmeteor:mocha-core
+underscore
+twbs:bootstrap@=3.3.5
+percolate:migrations
+cleandersonlobo:sweetalert2
+mizzao:user-status
+>>>>>>> upstream/staging

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template name="footer">
 
   <div id="footer">
@@ -52,3 +53,62 @@
   </div>
 </div>
 </template>
+=======
+<template name="footer">
+
+  <div id="footer">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-4"> <!-- column 1 -->
+            <div class="footer-logo">
+              <p href="{{pathFor 'home'}}"><img src="/images/logo.svg"></p>
+            </div>
+          </div>
+          <div class="col-md-2"> <!-- column 2 -->
+            <div class="footer-languages">
+              <p><strong>LANGUAGE</strong></p>
+              {{#each languageSwitcher in languageSwitchers}}
+                  <a href="#" {{languageSwitcher.attributes}}>{{languageSwitcher.name}}</a>
+              {{/each}}
+            </div>
+          </div>
+          <div class="col-md-2"> <!-- column 3 -->
+            <div class="footer-links">
+              <p><strong>COMMUNITY</strong></p>
+                <a href="/about">{{_ "about"}}</a>
+                <a href="/faq">{{_ "faq"}}</a>
+                <a href="/slack">{{_ "slack"}}</a>
+                <a href="https://github.com/codebuddies/codebuddies" target="_blank">Github</a>
+                <a href="https://www.youtube.com/channel/UCOBp46r9_g8kKRCc0y-rJVg" target="_blank">YouTube</a>
+                <a href="/coworking">24/7 Silent Hangout</a>
+                <a href="/learnings">Learnings</a>
+                <a href="https://medium.com/codebuddies" target="_blank">Medium Publication</a>
+                <a href="https://tinyletter.com/codebuddies" target="_blank">Newsletter</a>
+                <a href="https://opencollective.com/codebuddies" target="_blank">Open Collective</a>
+            </div>
+          </div>
+          <div class="col-md-2"> <!-- column 4 -->
+            <div class="footer-social">
+              <p><strong>CONNECT WITH US</strong></p>
+              <span class="footer-icons">
+                  <a href="https://github.com/codebuddies/codebuddies" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://codebuddies.slack.com" target="_blank"><i class="fab fa-slack-hash"></i></a>
+                  <a href="https://twitter.com/codebuddiesmeet" target="_blank"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.youtube.com/channel/UCOBp46r9_g8kKRCc0y-rJVg" target="_blank"><i class="fab fa-youtube"></i></a>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-2"> <!-- column 5 -->
+            <div class="footer-sponsor">
+              <p><strong>SPONSOR US</strong></p>
+              <p>Our project is free and <strong><a href="https://github.com/codebuddies/codebuddies" target="_blank">open-sourced</a></strong>. Help keep this project alive by <a class="sponsor" href="http://opencollective.com/codebuddies" target="_blank"><strong>donating to our Open Collective</strong>.</a></p>
+              <p>Built By Cool People Around The World!</p>
+              <a href="/privacy">Privacy Policy</a>
+            </div>
+          </div>
+    </div> <!-- ends row -->
+  </div>
+</div>
+</template>
+>>>>>>> upstream/staging

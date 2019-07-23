@@ -1,0 +1,71 @@
+<template name="basicUserInformation">
+  <div class="container">
+    <div class="page-header">
+      <h4>Welcome to CodeBuddies. Thank you for signing up!</h4>
+      <h4> <small>Let’s get your basic information taken care of before we move further.</small></h4>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label class=" control-label">First name <span>*</span>  </label>
+          <input type="text" class="form-control" id="fName">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label class=" control-label">Last name <span>*</span> </label>
+          <input type="text" class="form-control" id="lName">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label class=" control-label">One Line Biography<span>*</span></label>
+          <input type="text" class="form-control" id="bio">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label class=" control-label">What skill(s) can you help others with?<span>*</span></label>
+          <textarea class="form-control" rows="4" id="skillsHelpOthers" placeholder="Doesn&#39;t have to be programming skills. Examples: HTML, CSS, Javascript, Python, Databases, QA, Giving User Feedback, Proofreading a Blog Post, Writing Feedback, English, etc."></textarea>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label class=" control-label">What skill(s) are you trying to improve?<span>*</span></label>
+          <textarea class="form-control" rows="4" id="skillsImprove" ></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label class=" control-label">Username<span>*</span></label>
+          <input type="email" class="form-control" id="username" value="{{currentUser.username}}">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label class=" control-label">Email<span>*</span> </label>
+          <input type="email" class="form-control" id="email" disabled value="{{currentUser.email}}">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        {{#unless instance.processing.get}}
+          <button type="submit" class="btn btn-primary btn-block" id="saveAndContinue">Save & Continue</button>
+        {{else}}
+          <button type="button" class="btn btn-primary btn-block disabled"><i class="fas fa-sync fa-spin"></i> Processing </button>
+        {{/unless}}
+      </div>
+    </div>
+
+  </div>
+  <br>
+  <br>
+</template>

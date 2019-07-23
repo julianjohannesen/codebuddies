@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .status-list {
   padding: 0 20px;
   background-color: $bg-lightgrey;
@@ -86,3 +87,96 @@
     }
   }
 }
+=======
+.status-list {
+  padding: 0px 15px 20px;
+  background-color: $bg-lightgrey;
+  @include border-radius(0 0 4px 4px);
+  overflow-y: auto;
+
+  .title {
+    text-align: center;
+    padding: 10px 0;
+    @include font-face(700, 16px, bold, $black);
+  }
+
+  .status-item {
+    margin: 0;
+    list-style: none;
+    padding: 10px 0;
+    border-top: 1px solid $divider;
+    overflow: auto;
+
+    p { margin: 0px; }
+
+    li {
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    .btn {
+      display: inline-block;
+      @include font-face(400, 13px, normal, $black);
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    .edit-learning {
+      margin-left: 5px;
+    }
+
+    .edit-learning:hover {
+      cursor: pointer;
+    }
+
+    .delete-learning {
+      margin-left: 5px;
+    }
+
+    .delete-learning:hover {
+      cursor: pointer;
+    }
+
+    span.username {
+      @include font-face(700, 13px, italic, $warm-grey);
+    }
+
+    .status {
+      padding: 0 .4em;
+      display: inline-block;
+      @include font-face(400, 15px, normal, $primary-grey);
+    }
+
+    .status-date {
+      @include font-face(400, 13px, italic, $warm-grey);
+    }
+
+    .message {
+      color: $warm-grey;
+
+      &:hover {
+        color: $cta-blue;
+      }
+    }
+
+    .kudo-holder {
+      text-align: left;
+      vertical-align: top;
+      position: relative;
+      top: -7px;
+    }
+
+    .kudo-count {
+      @include font-face(400, 15px, normal, $primary-grey);
+    }
+    .learning-holder {
+      max-width: 90%;
+      .learning-title {
+        white-space: pre-line;
+      }
+    }
+  }
+}
+>>>>>>> upstream/staging

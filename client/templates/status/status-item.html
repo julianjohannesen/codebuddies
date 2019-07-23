@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template name="statusItem">
   <div>
     <ul class="status-item">
@@ -10,3 +11,17 @@
     </ul>
   </div>
 </template>
+=======
+<template name="statusItem">
+  <div>
+    <ul class="status-item">
+      <li>
+       <span><i class="fas {{hangoutStatus}}"></i></span>
+      </li>
+      <li>
+        <label class="status">{{statusMessage}}</label>&nbsp;&nbsp;<a href="{{pathFor 'profile' name=username userId=_id}}"><span class="username">{{username}}</span></a> <a href="#" class="message"><i class="fas fa-envelope" data-id={{_id}}></i></a> - <span class="status-date">{{livestamp statusDate}}</span>
+      </li>
+    </ul>
+  </div>
+</template>
+>>>>>>> upstream/staging

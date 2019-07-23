@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template name="header">
   {{> connectionBanner}}
   <nav class="navbar navbar-default navbar-static-top" role="navigation">
@@ -138,3 +139,173 @@
     <!-- /.container-fluid -->
   </nav>
 </template>
+=======
+
+<template name="header">
+  {{> connectionBanner}}
+  <div class="banner-notification">New: <a href="/coworking"><i class="fas fa-desktop"></i> 24/7 space for silent productivity</a></div>
+  {{# unless user.profile.privacyResponse}}{{#if currentUser}}{{> privacyAgreement}}{{/if}}{{/unless}}
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#cb2-navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{pathFor 'home'}}"><img src="/images/logo.svg"></a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="cb2-navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+
+          <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Community<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu fa-ul">
+               <li><a href="{{pathFor 'about'}}"><i class="fas fa-users fa-fw" aria-hidden="true"></i>
+                 {{_ "about"}}<span class="sr-only">(current)</span>
+               </a></li>
+               <li role="separator" class="divider"></li>
+               <li><a href="{{pathFor 'slack'}}">
+                    <i class="fab fa-slack-hash fa-fw" aria-hidden="true"></i>{{_ "slack"}}
+                  </a></li>
+               <li role="separator" class="divider"></li>
+               <li><a href="https://forum.codebuddies.org " target="_blank">
+                 <i class="fab fa-discourse fa-fw" aria-hidden="true"></i>Forum
+                 <i class="fas fa-external-link-alt fa-fw" aria-hidden="true"></i>
+               </a></li>
+              <li role="separator" class="divider"></li>
+               <li><a href="https://github.com/codebuddies/codebuddies" target="_blank">
+                 <i class="fab fa-github fa-fw" aria-hidden="true"></i>Github
+                 <i class="fas fa-external-link-alt fa-fw" aria-hidden="true"></i>
+               </a></li>
+               <li role="separator" class="divider"></li>
+               <li><a href="https://medium.com/codebuddies" target="_blank">
+                 <i class="fab fa-medium fa-fw" aria-hidden="true"></i>Publication
+                 <i class="fas fa-external-link-alt fa-fw" aria-hidden="true"></i>
+               </a></li>
+               <li role="separator" class="divider"></li>
+               <li><a href="https://www.youtube.com/channel/UCOBp46r9_g8kKRCc0y-rJVg" target="_blank">
+                 <i class="fab fa-youtube fa-fw" aria-hidden="true"></i>YouTube
+                 <i class="fas fa-external-link-alt fa-fw" aria-hidden="true"></i>
+               </a></li>
+               <li role="separator" class="divider"></li>
+               <li><a href="{{pathFor 'coworking'}}">
+                  <i class="fas fa-code fa-fw" aria-hidden="true"></i> 24/7 Silent Hangout
+                </a></li>
+               <li role="separator" class="divider"></li>
+               <li><a href="{{pathFor 'learnings'}}">
+                  <i class="fas fa-book fa-fw" aria-hidden="true"></i>{{_ "learnings"}}
+                </a></li>
+                <li role="separator" class="divider"></li>
+               <li><a href="{{pathFor 'faq'}}">
+                 <i class="fas fa-question fa-fw" aria-hidden="true"></i>{{_ "faq"}}
+               </a></li>
+               <!-- Donate -->
+			   <li role="separator" class="divider"></li>
+               <li><a href="https://opencollective.com/codebuddies" target="_blank">
+                <i class="fas fa-dollar fa-fw" aria-hidden="true"></i>Sponsor Us <i class="fas fa-external-link-alt fa-fw" aria-hidden="true"></i>
+               </a></li>
+             </ul>
+          </li>
+          <!-- Hangouts -->
+          <li><a href="{{pathFor 'hangouts'}}">{{_ "browse_hangouts"}} <span class="sr-only">(current)</span></a></li>
+          <!-- Study Groups -->
+          <li><a href="{{pathFor 'all study groups'}}">Groups</a></li>
+          <!-- Discussions -->
+          <!-- comment out temporarily -->
+			    <li><a href="{{pathFor 'discussions'}}">Discussions</a></li>
+
+          {{! for visitors only}}
+          {{#unless currentUser}}
+
+            <li id="login-drop-down" class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Sign Up/Sign In <span class="caret"></span>
+              </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#" class="signInSlack"><button class="btn btn-slack"><img src="/images/slack-icon.png">&nbsp;&nbsp;{{_ "sign_in_with"}} <b>Slack</b></button></a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#" class="signInGithub"><button class="btn btn-github"><i class="fab fa-github fa-fw"></i>&nbsp;&nbsp;{{_ "sign_in_with"}} <b>Github</b></button></a></li>
+                </ul>
+            </li>
+
+          {{! for logged in user}}
+          {{else}}
+
+            {{! won't be visible to cb admin}}
+            {{#unless isInRole 'admin' 'CB'}}
+              <!-- notification for user-->
+              <li><a href="{{pathFor 'user notification'}}"><i class="fas fa-bell" aria-hidden="true"></i> {{#if userNotificationCount}}<small><span class="badge">{{userNotificationCount}}</span></small>{{/if}} </a></li>
+              <li><a href="{{pathFor 'inbox'}}"><i class="far fa-envelope" aria-hidden="true"></i> {{#if unreadConversationCount}}<small><span class="badge">{{unreadConversationCount}}</span></small>{{/if}} </a></li>
+              <!-- dropdown for user-->
+              <li id="user-drop-down" class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="fas fa-plus" aria-hidden="true"></i> <span class="caret"></span>
+                </a>
+                  <ul class="dropdown-menu" role="menu">
+                    <!-- pop up for new hangout -->
+                    <li id="newHangout"><a href="#">{{_ "new_hangout"}}</a></li>
+                    <!-- pop up for new studygroup -->
+                    <li id="newStudyGroup"><a href="#">{{_ "new_study_group"}}</a></li>
+                    <!-- pop up for new discussion -->
+                    <li id="newDiscussion"><a href="#">{{_ "new_discussion"}}</a></li>
+                  </ul>
+              </li>
+
+              {{#if isInRole 'moderator' 'CB'}}
+                <li id="user-drop-down" class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="fas fa-cogs" aria-hidden="true"></i>
+                  </a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="{{pathFor 'stats'}}">Statistics</a></li>
+                    <li><a href="{{pathFor 'manage user'}}">Manage Users</a></li>
+                    <li><a href="{{pathFor 'notifications'}}">Notifications {{#if notificationCount}}<small><span class="badge">{{notificationCount}}</span></small>{{/if}}</a></li>
+                  </ul>
+                </li>
+              {{/if}}
+
+              <li id="user-drop-down" class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <img src="{{user.profile.avatar.default}}" class="img-circle"> {{user.username}} <span class="caret"></span>
+                </a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="{{pathFor 'my study groups'}}"><i class="fas fa-users fa-fw"></i> {{_ "my_study_groups"}}</a></li>
+                    <li><a href="/profile/{{user.username}}/{{user._id}}"><i class="fas fa-user fa-fw"></i> {{_ "profile"}}</a></li>
+                    <li><a href="{{pathFor 'account' name=user.username userId=user._id}}"><i class="fas fa-cog fa-fw"></i> {{_ "settings"}}</a></li>
+                    <li><a href="#" id="signOut"><i class="fas fa-sign-out-alt fa-fw"></i> {{_ "sign_out"}}</a></li>
+                  </ul>
+              </li>
+
+            {{else}}
+
+                <li id="user-drop-down" class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="fas fa-cogs" aria-hidden="true"></i>
+                  </a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="{{pathFor 'stats'}}">Statistics</a></li>
+                    <li><a href="{{pathFor 'manage user'}}">Manage Users</a></li>
+                    <li><a href="{{pathFor 'notifications'}}">Notifications {{#if notificationCount}}<small><span class="badge">{{notificationCount}}</span></small>{{/if}}</a></li>
+                  </ul>
+                </li>
+
+                {{> loginButtons align="right"}}
+
+            {{/unless}}
+
+          {{/unless}}
+
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+</template>
+>>>>>>> upstream/staging

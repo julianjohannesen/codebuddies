@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #slack {
   p, li {
     @include font-face(400, 16px, normal, $primary-grey);
@@ -49,3 +50,69 @@
   h3.popover-title { margin-top: 0;}
   h3 { font-weight: 200;}
 }
+=======
+#slack {
+  p, li {
+    @include font-face(400, 16px, normal, $primary-grey);
+    line-height: 27px;
+  }
+
+  .flags img {
+    @include border-radius(3px);
+    width: 51px;
+  }
+
+  .slack-top {
+    background: linear-gradient(to top, rgba(30, 144, 255, .5) 0%, rgba(30, 144, 255, .5) 0%, rgba(30, 144, 255, .5) 0%, rgba(30, 144, 255, .55) 18%, rgba(30, 144, 255, .64) 46%, rgba(3, 87, 232, .8) 100%), url(/images/language-logos.svg) center repeat;
+    padding: 100px 0;
+    h2 { @include font-face(700, 32px, bold, $bg-white); }
+  }
+
+  .slack-middle {
+    background: $bg-white;
+    padding: 50px 0;
+    }
+
+  .etiquette {
+    h1 { margin-top: 60px; margin-right: 0px; margin-bottom: 20px; margin-left: 0px;
+      font-size: 34px; font-weight: 700; letter-spacing: -.03rem; color: #333;}
+    h2 { font-size: 27px; font-weight: 600; line-height: 33px; letter-spacing: -1px; margin-right: 0px;
+      margin-bottom: 0px; margin-left: 0px;}
+    h3 { font-size: 15px; font-weight: 800; line-height: 22px; min-height: 22px;
+      text-transform: uppercase; letter-spacing: 1px; margin-top: 0px; margin-right: 0px;
+      margin-bottom: 0px; margin-left: 0px;}
+    hr {margin-top: 1.9em}
+  }
+
+  .slack-hangout {
+    background: $bg-lightgrey;
+    padding: 100px 0;
+  }
+
+  .divider {
+    border-top: 1px solid $secondary-grey;
+    width: 60px;
+    margin-bottom: 1.65em;
+    opacity: .2;
+  }
+
+  .slack-bottom {
+    background: $bg-white;
+    padding: 50px 0;
+  }
+
+  [data-toggle="popover"] {
+    display: inline-block;
+  }
+
+  a.user-popover {
+    .popover { margin-top: -10px;}
+    .popover:hover {
+      cursor: default;
+    }
+  }
+
+  h3.popover-title { margin-top: 0;}
+  h3 { font-weight: 200;}
+}
+>>>>>>> upstream/staging

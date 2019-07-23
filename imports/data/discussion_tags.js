@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // available discussion tags
 export default discussion_tags  = [
   "algorithms",
@@ -37,3 +38,53 @@ export default discussion_tags  = [
   "wordpress"
 
 ]
+=======
+// available discussion tags
+export default (discussion_tags = [
+  "advice",
+  "algorithms",
+  "augmented-reality",
+  "blockchain",
+  "codebuddies-meta",
+  "css",
+  "data-science",
+  "design-and-code",
+  "devops",
+  "django",
+  "docker",
+  "editors",
+  "flux",
+  "general",
+  "git",
+  "go-lang",
+  "hackathon",
+  "hangout-proposal",
+  "html",
+  "interview-practice",
+  "javascript",
+  "job-postings",
+  "loc-nyc",
+  "meteorjs",
+  "mixed-reality",
+  "mobx",
+  "mongodb",
+  "mud",
+  "nosql",
+  "other",
+  "pair-programming",
+  "php",
+  "python",
+  "r",
+  "reactjs",
+  "redux",
+  "ruby",
+  "security",
+  "sql",
+  "sql-lite",
+  "TDD",
+  "testing",
+  "virtual-reality",
+  "vuejs",
+  "wordpress"
+]);
+>>>>>>> upstream/staging

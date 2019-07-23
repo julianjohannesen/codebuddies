@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template name="learningItem">
     <ul class="status-item">
        <li>
@@ -27,3 +28,34 @@
       </li>
     </ul>
 </template>
+=======
+<template name="learningItem">
+    <ul class="status-item">
+       <li>
+          <div class="kudo-holder display-inline">
+              <label class="kudo-count {{#unless currentUser}} continue-popup {{/unless}}">
+
+                <i class="fas fa-angle-up fa-2x btn-{{#if buttonStatus}}un{{/if}}like  btn-learning btn-xs"></i>
+
+              <p class="align-center">{{kudos}}</p>
+            </label>
+          </div>
+          <div class="learning-holder display-inline">
+             <span class="status-date">
+                {{learningTime}} by
+             </span>
+             <a href="{{pathFor 'profile' name=username userId=userId}}" class="{{#unless currentUser}} continue-popup {{/unless}}"><span class="username">{{username}}</span></a>
+              <label class="status">
+                  {{#if isOwner}}
+                    <span class="{{#unless currentUser}} continue-popup {{else}} delete-learning {{/unless}}"><i class="fas fa-trash-alt"></i></span> <a class="{{#unless currentUser}} continue-popup {{else}} edit-learning {{/unless}}">(Edit)</a>
+                  {{/if}}
+              </label>
+              <p class="learning-title">{{{ learningTitle }}}</p>
+          </div>
+
+
+
+      </li>
+    </ul>
+</template>
+>>>>>>> upstream/staging

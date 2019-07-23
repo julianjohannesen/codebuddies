@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template name="homeLoggedOut">
   <div class="section home-top">
     <div class="container">
@@ -220,3 +221,305 @@
   </div>
 
 </template>
+=======
+<template name="homeLoggedOut">
+  <div class="section home-top">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <div id="intro">
+            <h2>Learn and chat about code!</h2>
+            <p class="intro">CodeBuddies is a global community of amazing people who help each other become better at software development through conversations on <strong>Slack</strong> and peer-to-peer organized <strong>study groups</strong> and <strong>virtual hangouts</strong>.</p>
+            <p>This project is free, not-for-profit, <a href="http://opencollective.com/codebuddies" target="_blank" class="link">transparent on Open Collective</a>, <i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/codebuddies/codebuddies" target="_blank" class="link">open-sourced</a>, and powered by a fantastic team of core volunteer <a href="/about" class="link">contributors</a>.</p>
+            <div class="join-slack">
+              <p><strong>Sign Up/Sign In</strong> with <a href="#" class="signIn link">Slack</a> or <a href="#" class="signInGithub link">Github</a>.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+
+              <div class="statistic-row">
+                <div class="statistic-circle">
+                  <div class="statistic-content">
+                    <p class="total">{{ instance.hangoutsCount.get }}</p>
+                    <p class="category">{{_ "hangouts_organized"}}</p>
+                  </div>
+                </div>
+                <div class="statistic-circle">
+                  <div class="statistic-content">
+                    <p class="total">{{ instance.learningsCount.get }}</p>
+                    <p class="category">{{_ "learnings_reported"}}</p>
+                  </div>
+                </div>
+                <div class="statistic-circle">
+                  <div class="statistic-content">
+                    <p class="total">{{ instance.studyGroupCount.get }}</p>
+                    <p class="category">{{_ "study_groups"}}</p>
+                  </div>
+                </div>
+                <div class="statistic-circle">
+                  <div class="statistic-content">
+                    <p class="total">{{ instance.discussionCount.get }}</p>
+                    <p class="category">{{_ "discussions"}}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slack-window">
+                <img src="/images/slack-window.png" class="img-responsive" id="slack-screenshot">
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section home-middle">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-centered align-center">
+          <h2>Peer-to-peer organized study groups</h2>
+          <p>Have a learning goal, like finishing a MOOC course or finding study partners with whom to work on code exercises together? You can start a <a href="/study-groups">study group</a> to find study partners with similar goals. Within each group, you can join a 24/7 hangout, log your current status ("I'm on Ch. 5!"), log your learnings/accomplishments, and schedule hangouts for that group.</p>
+          <h2>Peer-to-peer organized virtual hangouts</h2>
+            <p>Joining or starting a screensharing hangout is a fun way to learn a programming or web development skill quicker, and anyone can schedule one.</p>
+            <p>As a community, we tend to keep the video camera turned off by default and mainly rely on voice (if it's not a "silent" hangout) and the chat box. Screensharing is useful, but always optional. Be aware that once you stop screen sharing, you will have to manually turn off your video feed. Our hangouts are a safe space and everyone abides by a <a href="https://github.com/codebuddies/codebuddies/blob/release/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a>.</p>
+              <img src="/images/hangout-example-1.gif" width="100%"/>
+        </div>
+      </div>
+      <div class="row" style="margin: 40px 0;">
+        <div class="col-md-4 align-center">
+          <div id="card-silent" class="hangout-card-homepage">
+            <h3><i class="fas fa-microphone-slash text-danger-color type"></i> Silent Hangout</h3>
+
+            <div class="hangout-image">
+              <div class="hangout-image-inner">
+                <img src="/images/hangout-silent.svg">
+              </div>
+            </div>
+
+            <div class="hangout-details">
+              <div class="hangout-details-inner">
+                <i class="fas fa-microphone-slash"></i>
+                <table>
+                  <tr>
+                    <td class="left">Video</td>
+                    <td>OFF</td>
+                  </tr>
+                  <tr>
+                    <td class="left">Microphone</td>
+                    <td>OFF</td>
+                  </tr>
+                  <tr>
+                    <td class="left">Screenshare</td>
+                    <td>ON</td>
+                  </tr>
+
+                </table>
+              </div>
+            </div>
+            <p>Create a silent hangout to motivate yourself to get through a tutorial with others who are learning from the same tutorial, or create one for a fun silent coworking experience.
+
+
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 align-center">
+          <div id="card-teach" class="hangout-card-homepage">
+            <h3><i class="fas fa-user text-warning-color type"></i> Teaching Hangout</h3>
+
+            <div class="hangout-image">
+              <div class="hangout-image-inner">
+                <img src="/images/hangout-teach.svg">
+              </div>
+            </div>
+
+            <div class="hangout-details">
+              <div class="hangout-details-inner">
+                <i class="fas fa-user"></i>
+                <table>
+                  <tr>
+                    <td class="left">Video</td>
+                    <td>OFF</td>
+                  </tr>
+                  <tr>
+                    <td class="left">Microphone</td>
+                    <td>ON</td>
+                  </tr>
+                  <tr>
+                    <td class="left">Screenshare</td>
+                    <td>ON</td>
+                  </tr>
+
+                </table>
+              </div>
+            </div>
+            <p>Create a teaching hangout to practice teaching a concept or to walk participants through a codebase. This is your chance to share what you know!</p>
+          </div>
+        </div>
+        <div class="col-md-4 align-center">
+          <div id="card-collaborate" class="hangout-card-homepage">
+            <h3><i class="fas fa-users text-warning-color type"></i> Collaboration Hangout</h3>
+
+            <div class="hangout-image">
+              <div class="hangout-image-inner">
+                <img src="/images/hangout-collaboration.svg">
+              </div>
+            </div>
+
+            <div class="hangout-details">
+              <div class="hangout-details-inner">
+                <i class="fas fa-users"></i>
+                <table>
+                  <tr>
+                    <td class="left">Video</td>
+                    <td>OFF</td>
+                  </tr>
+                  <tr>
+                    <td class="left">Microphone</td>
+                    <td>ON</td>
+                  </tr>
+                  <tr>
+                    <td class="left">Screenshare</td>
+                    <td>ON</td>
+                  </tr>
+
+                </table>
+              </div>
+            </div>
+            <p>Create a collaboration hangout to pair program on a coding exercise, talk through a chapter of a tutorial, or work on an open-sourced project together.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="section home-psst align-center">
+    <div class="container">
+      <div class="row">
+        <div id="intro">
+          <h3>Search for study groups and hangouts to join (or start your own)!</h3>
+          <p>On the CodeBuddies site, you can join study groups and RSVP to scheduled hangouts, start your own group or hangout, and log your current status in a group as well as your learnings/accomplishments.</p>
+        </div>
+        <div class="hangout-example">
+          <img src="/images/join-hangouts.png" width="100%" id="hangout-join"/>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="section home-faq align-center">
+    <div class="container">
+      <div class="row">
+        <h2>FAQ</h2>
+
+        <div class="col-md-5 col-md-offset-1">
+          <h3>Who is CodeBuddies for?</h3>
+          <p>CodeBuddies welcomes code learners from all levels. Our friendly and inclusive community is always happy to help each other learn.</p>
+
+          <h3>What is the CodeBuddies Slack chatroom?</h3>
+          <p>The CodeBuddies Slack chatroom has 80+ channels and each channel has conversations about a specific topic (e.g. #javascript, #interview-practice, #advice)</p>
+
+          <h3>Is this free?</h3>
+          <p>Yep. And we're grateful to our sponsors and everyone who's donated to our <a href="https://opencollective.com/codebuddies" target="_blank">Open Collective</a>. You help keep this project alive!</p>
+
+        </div>
+
+        <div class="col-md-5">
+
+          <h3>Can I get help with my code?</h3>
+          <p>Sure! Ask questions in our Slack chatroom. Our community is always helping each other learn. Please be sure to read the Slack Etiquette Guidelines <a href="/slack">here</a>.</p>
+
+
+          <h3>How long are the hangouts?</h3>
+          <p>As a hangout host, you get to set the duration of your hangout.</p>
+          <br />
+
+
+          <h3>Why should I join CodeBuddies?</h3>
+          <p>CodeBuddies allows you to find people with similar learning goals (study groups) and start or join virtual hangouts to study/work on something together.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section home-testimonials">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Testimonials (Anonymous)</h2>
+          <p class="align-center">Don't just take our word for it; these are what some of our members
+            <a href="https://medium.com/codebuddies/codebuddies-community-survey-results-really-insightful-commentary-from-yall-8dcb36965d71" target="_blank">
+              have said anonymously</a> about CodeBuddies.</p>
+          <div class="col-md-6">
+              <div class="testimonial-bubble bubble-left">
+                <div class="quote-icons">
+                  <i class="fa fa-quote-left"></i><i class="fa fa-quote-right"></i>
+                </div>
+                <p class="testimonial">CodeBuddies is a place where people of all kinds meet up to advance their jobs, skills, and knowledge as a team.</p>
+              </div>
+              <div class="testimonial-bubble bubble-left">
+                <div class="quote-icons">
+                  <i class="fa fa-quote-left"></i><i class="fa fa-quote-right"></i>
+                </div>
+                <p class="testimonial">CodeBuddies has helped me by giving me a place to talk about coding without being judged by who I am and what languages and skills I’m learning.</p>
+              </div>
+              <div class="testimonial-bubble bubble-left">
+                <div class="quote-icons">
+                  <i class="fa fa-quote-left"></i><i class="fa fa-quote-right"></i>
+                </div>
+                <p class="testimonial">I loved seeing all the positivity, especially when I was having a hair-pulling-out day. It’s great to see people helping and giving advice and genuinely being good and nice people to their fellow developers.</p>
+              </div>
+          </div>
+          <div class="col-md-6">
+            <div class="testimonial-bubble bubble-right">
+              <div class="quote-icons">
+                <i class="fa fa-quote-left"></i><i class="fa fa-quote-right"></i>
+              </div>
+              <p class="testimonial">An active Slack community with a team that genuinely cares. Useful for those learning how to code.</p>
+            </div>
+            <div class="testimonial-bubble bubble-right">
+              <div class="quote-icons">
+                <i class="fa fa-quote-left"></i><i class="fa fa-quote-right"></i>
+              </div>
+              <p class="testimonial">Very helpful to meet people also looking to improve their skills. Helpful also if you are stuck on a concept or piece of code as it can be posted as snippet for others to help resolve issue.</p>
+            </div>
+            <div class="testimonial-bubble bubble-right">
+              <div class="quote-icons">
+                <i class="fa fa-quote-left"></i><i class="fa fa-quote-right"></i>
+              </div>
+              <p class="testimonial">I work remotely with a couple international teams (much smaller US team) and it’s nice to have found some like minded people with regular hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section home-ask">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Start learning with us now!</h2>
+          <div class="join-slack">
+            <p><br /><strong>Sign Up/Sign In</strong> with <a href="#" class="signIn link">Slack</a> or <a href="#" class="signInGithub link">Github</a>.
+            <br />Select <strong>CodeBuddies</strong> or sign into the <strong>codebuddies</strong>.slack.com team.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</template>
+>>>>>>> upstream/staging

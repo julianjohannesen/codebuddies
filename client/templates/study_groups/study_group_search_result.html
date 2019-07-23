@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template name="studyGroupsSearchResult">
   <div class="container margin-top-2">
     <div class="page-header align-center"><h4 class="search-message">Showing results for <strong>'{{sgSearchTerm}}'</strong></h4></div>
@@ -46,3 +47,61 @@
 
   </div>
 </template>
+=======
+<template name="studyGroupsSearchResult">
+  <div class="container margin-top-2">
+    <div class="page-header align-center"><h4 class="search-message">Showing results for <strong>'{{sgSearchTerm}}'</strong></h4></div>
+
+
+      {{#if searchResults.count}}
+
+        <div class="row">
+          {{#each searchResults}}
+            <div class="col-md-4">
+            <div class="well card">
+              <h4>
+                <a href="{{pathFor 'study group' studyGroupSlug=slug studyGroupId=_id}}">  {{title}} </a>
+                <br> <small>{{tagline}}</small> <small class="members"><i class="fas fa-users fa-fw"></i>{{members.length}}</small>
+                {{#if isInRole 'owner' _id}}
+                  <span class="label label-primary pull-right">Owner</span>
+                {{/if}}
+                {{#if isInRole 'admin' _id}}
+                  <span class="label label-primary pull-right">Admin</span>
+                {{/if}}
+                {{#if isInRole 'moderator' _id}}
+                  <span class="label label-primary pull-right">Moderator</span>
+                {{/if}}
+                {{#if isInRole 'member' _id}}
+                  <span class="label label-primary pull-right">Member</span>
+                {{/if}}
+
+              </h4>
+
+              {{#unless isInRole 'owner, admin, moderator, member' _id }}
+                  <button class="btn btn-join-study-group-1">{{_ "join_study_group"}}</button>
+              {{/unless}}
+
+              {{#if isInRole 'admin, moderator, member' _id }}
+                  <button class="btn btn-leave-study-group-1">{{_ "leave_study_group"}}</button>
+              {{/if}}
+            </div>
+            </div>
+          {{/each}}
+        </div>
+
+      {{else}}
+
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h4>Sorry, no results were found.</h4>
+              <p>Please check your spelling, or try another search.</p>
+            </div>
+          </div>
+        </div>
+
+      {{/if}}
+
+  </div>
+</template>
+>>>>>>> upstream/staging
