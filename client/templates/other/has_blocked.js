@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-"use strict"
-
-Template.hasBlocked.helpers({
-  target: function () {
-    var loggedInUserId = Meteor.userId()
-    if (Roles.userIsInRole(loggedInUserId, 'inactive', 'CB')) {
-      return 'suspended'
-    } else {
-      return this.targetTemplate
-    }
-  }
-})
-=======
 "use strict"
 
 import '../../../imports/ui/pages/users/basic_user_information';
@@ -32,4 +18,3 @@ Template.hasBlocked.helpers({
     }
   }
 })
->>>>>>> upstream/staging

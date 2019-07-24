@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-<template name="discussionResponsesList">
-  {{#if Template.subscriptionsReady}}
-
-    {{#unless responses.count}}
-      <!-- todo filter-->
-    {{/unless}}
-
-    {{#each responses}}
-      {{> discussionResponseCard}}
-    {{else}}
-      [be the first to comment]
-    {{/each}}
-
-  {{else}}
-    {{> loading}}
-  {{/if}}
-</template>
-=======
 <template name="discussionResponsesList">
   {{#if Template.subscriptionsReady}}
 
@@ -34,4 +15,3 @@
     {{> loading}}
   {{/if}}
 </template>
->>>>>>> upstream/staging

@@ -1,44 +1,3 @@
-<<<<<<< HEAD
-// available discussion tags
-export default discussion_tags  = [
-  "algorithms",
-  "augmented-reality",
-  "blockchain",
-  "css",
-  "devops",
-  "data-science",
-  "design-and-code",
-  "django",
-  "docker",
-  "flux",
-  "git",
-  "go-lang",
-  "html",
-  "interview-practice",
-  "javascript",
-  "hackathon",
-  "job-postings",
-  "meteorjs",
-  "mixed-reality",
-  "mobx",
-  "mongodb",
-  "nosql",
-  "others",
-  "php",
-  "python",
-  "r",
-  "reactjs",
-  "redux",
-  "ruby",
-  "security",
-  "sql",
-  "sql-lite",
-  "vuejs",
-  "virtual-reality",
-  "wordpress"
-
-]
-=======
 // available discussion tags
 export default (discussion_tags = [
   "advice",
@@ -87,4 +46,3 @@ export default (discussion_tags = [
   "vuejs",
   "wordpress"
 ]);
->>>>>>> upstream/staging

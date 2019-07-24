@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-<template name="resourcesList">
-  {{#if Template.subscriptionsReady}}
-    {{#if resources.count}}
-      {{#each resources}}
-        <div class="well">
-          <h4>
-            {{#if isInRole 'owner, admin, moderator' ../_id}}
-              <span class="pull-right cb-delete delete-resource" id="cancelAddResource"><i class="fa fa-times delete" aria-hidden="true"></i></span>
-            {{/if}}
-            {{title}}
-            <br>
-            <small>
-              <a href="{{url}}" target="_blank" alt="{{title}}">{{url}}</a>
-            </small>
-          </h4>
-        </div>
-      {{/each}}
-    {{else}}
-      {{#if isInRole 'owner, admin, moderator, member' _id}}
-        <div class="alert alert-info">Please add some links that are relevant to this group.</div>
-      {{else}}
-        <div class="alert alert-info">Join this group to add a link.</div>
-      {{/if}}
-    {{/if}}
-  {{else}}
-    {{> loading}}
-  {{/if}}
-</template>
-=======
 <template name="resourcesList">
   {{#if Template.subscriptionsReady}}
     {{#if resources.count}}
@@ -56,4 +26,3 @@
     {{> loading}}
   {{/if}}
 </template>
->>>>>>> upstream/staging

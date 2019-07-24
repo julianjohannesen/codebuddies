@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-<template name="statusList">
-  <div class="status-list">
-    {{#if isWorking type}}
-      {{#unless currentUser}}
-        <p class="align-center">Please <a href="#" class="signIn">sign in to codebuddies.slack.com</a> to see current users online. (<a href="http://codebuddiesmeet.herokuapp.com" target="_blank">Get account</a>)</p>
-      {{else}}
-          <div class="title">{{_ "learning_message" count=usersOnlineCount}}</div>
-          {{#each usersOnline}}
-            {{> statusItem}}
-          {{/each}}
-      {{/unless}}
-    {{else}}
-      <div class="title">{{_ "accomplishment_message" count=learnedUsersCount}}</div>
-      {{#each learnings}}
-        {{> learningItem}}
-      {{/each}}
-      {{#if Template.subscriptionsReady}}
-        {{#if hasMoreLearnings}}
-          <button id="load-more-learnings" class="btn btn-default btn-block">Load more</button>
-        {{/if}}
-      {{/if}}
-    {{/if}}
-  </div>
-</template>
-=======
 <template name="statusList">
   <div class="status-list">
     {{#if isWorking type}}
@@ -49,4 +23,3 @@
     {{/if}}
   </div>
 </template>
->>>>>>> upstream/staging
