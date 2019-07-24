@@ -1,42 +1,3 @@
-<<<<<<< HEAD
-.navbar {
-  margin-bottom: 0;
-
-  .container {
-    .navbar-brand {
-      @include font-face(700, 24px, bold, $black);
-      margin-top: 4px;
-      width: 8em;
-
-      img {
-        display: inline-block;
-      }
-    }
-  }
-  span.badge {
-    position: relative;
-    top: -2px;
-  }
-}
-
-.navbar-default {
-  background-color: $white;
-
-  .navbar-nav {
-    li > a, li > a:hover {
-      @include font-face(400, 18px, normal, $cta-blue);
-      margin-top: 4px;
-    }
-
-    li > a > img {
-      display: inline-block;
-      width: 34px;
-      height: 34px;
-      margin-top: -4px;
-    }
-  }
-}
-=======
 .banner-notification {
     background: $banner;
     color: $primary-grey;
@@ -91,4 +52,3 @@
     }
   }
 }
->>>>>>> upstream/staging
